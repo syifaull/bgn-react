@@ -16,6 +16,10 @@ $light-gray: #AEAEAE;
   color: white
 }
 
+.shine:hover {
+  box-shadow: #FC0 1px 1px 5px, #FC0 -1px -1px 5px;
+}
+
 .text-gray {
   color: $light-gray;
 }

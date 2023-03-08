@@ -65,8 +65,11 @@ const Home = () => {
           <div className="row row-cols-lg-5 pt-4">
             {people.map((item, index) => {
               return (
-                <div className="col pb-3">
-                  <Card key={index} name={item.name} />
+                <div
+                  className="col d-flex justify-content-center pb-3"
+                  key={index}
+                >
+                  <Card name={item.name} />
                 </div>
               );
             })}
