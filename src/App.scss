@@ -7,6 +7,7 @@ $light-gray: #AEAEAE;
   font-family: 'Nunito', sans-serif;
   background-color: black;
   color: white;
+  text-decoration: none;
 }
 
 .text-shine:hover {
@@ -21,4 +22,12 @@ $light-gray: #AEAEAE;
 
 .starwars-img {
   width: 25rem; 
+}
+
+.starwars-logo {
+  width: 8rem;
+}
+
+a {
+  text-decoration: none;
 }
