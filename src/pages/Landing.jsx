@@ -2,7 +2,6 @@ import React from "react";
 
 const Landing = () => {
   return (
-    // min-vh-100
     <div className="container min-vh-100 d-flex justify-content-center align-items-center">
       <div className="text-center">
         <img
@@ -12,9 +11,26 @@ const Landing = () => {
         />
         <p className="fw-semibold pt-3">A guide for beginners</p>
         <br></br>
-        <a href="/people">
-          <p className="text-shine text-gray fw-bold fs-5">Get Started</p>
-        </a>
+        <div className="row fw-bold fs-5">
+          <a href="/people" className="col text-shine text-gray">
+            People
+          </a>
+          <a href="/films" className="col text-shine text-gray">
+            Films
+          </a>
+          <a href="/planets" className="col text-shine text-gray">
+            Planets
+          </a>
+          <a href="/species" className="col text-shine text-gray">
+            Species
+          </a>
+          <a href="/starships" className="col text-shine text-gray">
+            Starships
+          </a>
+          <a href="/vehicles" className="col text-shine text-gray">
+            Vehicles
+          </a>
+        </div>
       </div>
     </div>
   );

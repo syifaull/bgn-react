@@ -13,7 +13,7 @@ const Home = () => {
   const [page, setPage] = useState(1);
   // process.env.REACT_APP_BASE_URL
 
-  const getPeople = async () => {
+  const getPeople = async (page) => {
     await axios
       .get(`https://swapi.dev/api/people/?page=${page}`)
       .then((result) => {
@@ -26,8 +26,8 @@ const Home = () => {
   };
 
   useEffect(() => {
-    getPeople();
-  }, []);
+    getPeople(page);
+  }, [page]);
 
   const handlePrevious = () => {
     setPage(page > 1 ? page - 1 : 1);
@@ -75,7 +75,7 @@ const Home = () => {
             })}
           </div>
           <div className="d-flex justify-content-center py-3">
-            <div className="row">
+            <div className="row text-shine">
               <div className="col">
                 <FontAwesomeIcon icon={faArrowLeft} onClick={handlePrevious} />
               </div>
