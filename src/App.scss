@@ -10,8 +10,7 @@ $light-gray: #AEAEAE;
   text-decoration: none;
 }
 
-.text-shine:hover {
-  // text-shadow: 1px 1px 5px white;
+.text-shine:hover, .Nav.Link:active {
   text-shadow: #FC0 1px 1px 5px, #FC0 -1px -1px 5px; 
   color: white
 }
@@ -22,6 +21,10 @@ $light-gray: #AEAEAE;
 
 .text-gray {
   color: $light-gray;
+}
+
+.text-dark-gray {
+  color: $gray;
 }
 
 .starwars-img {
@@ -40,8 +43,8 @@ p {
   margin-bottom: 0px;
 }
 
-.section-image {
-  width: 2rem;
-  height: 2rem;
+.image-detail {
+  width: 20rem;
   background-color: white;
 }
+

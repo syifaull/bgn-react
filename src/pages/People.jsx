@@ -9,19 +9,19 @@ import Load from "../components/Load";
 import Navigation from "../components/Navigation";
 import Section from "../components/Section";
 
-const Planets = () => {
-  const [planets, setPlanets] = useState([]);
+const People = () => {
+  const [people, setPeople] = useState([]);
   const [allPage, setAllpage] = useState(0);
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const getPlanets = async (page) => {
+  const getPeople = async (page) => {
     setIsLoading(true);
     await axios
-      .get(process.env.REACT_APP_BASE_URL + `/planets/?page=${page}`)
+      .get(process.env.REACT_APP_BASE_URL + `/people/?page=${page}`)
       .then((result) => {
-        setPlanets(result.data.results);
+        setPeople(result.data.results);
         setAllpage(result.data.count);
         setIsLoading(false);
       })
@@ -31,7 +31,7 @@ const Planets = () => {
   };
 
   useEffect(() => {
-    getPlanets(page);
+    getPeople(page);
   }, [page]);
 
   const handlePrevious = () => {
@@ -43,7 +43,7 @@ const Planets = () => {
   };
 
   const handleDetail = (detail) => {
-    navigate("/blm-ada", {
+    navigate("/detail-people", {
       state: {
         detail: detail,
       },
@@ -75,7 +75,7 @@ const Planets = () => {
           </div>
         </div>
         <div className="min-vh-100">
-          <Section title="Planets" />
+          <Section title="People" />
           <div className=" d-flex justify-content-center">
             {isLoading ? (
               <div>
@@ -83,7 +83,7 @@ const Planets = () => {
               </div>
             ) : (
               <div className="row row-cols-lg-5 pt-4">
-                {planets.map((item, index) => {
+                {people.map((item, index) => {
                   return (
                     <div
                       className="col d-flex justify-content-center pb-3"
@@ -127,4 +127,4 @@ const Planets = () => {
   );
 };
 
-export default Planets;
+export default People;
