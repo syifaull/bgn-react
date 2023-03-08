@@ -1,5 +1,7 @@
 import React from "react";
+import Card from "../components/Card";
 import Navbar from "../components/Navbar";
+import Section from "../components/Section";
 
 const Home = () => {
   return (
@@ -25,7 +27,12 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="container"></div>
+      <div className="">
+        <Section />
+        <div>
+          <Card />
+        </div>
+      </div>
     </div>
   );
 };
