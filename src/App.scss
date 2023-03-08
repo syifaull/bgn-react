@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+$gray : #1D1E1F;
+$light-gray: #AEAEAE;
+
+.App {
+  font-family: 'Nunito', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.text-shine:hover {
+  // text-shadow: 1px 1px 5px white;
+  text-shadow: #FC0 1px 1px 5px, #FC0 -1px -1px 5px; 
+  color: white
+}
+
+.text-gray {
+  color: $light-gray;
+}
+
+.starwars-img {
+  width: 25rem; 
+}
