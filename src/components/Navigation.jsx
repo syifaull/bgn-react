@@ -4,16 +4,9 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 const Navigation = () => {
   return (
     <div>
-      {/* <nav>
-        <img
-          src="https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png"
-          alt="Star Wars logo"
-          className="starwars-logo pt-3"
-        />
-      </nav> */}
       <Navbar variant="dark">
         <Container>
-          <Navbar.Brand href="/home">
+          <Navbar.Brand href="/people">
             <img
               src="https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png"
               alt="Star Wars logo"
@@ -21,22 +14,22 @@ const Navigation = () => {
             />
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home" className="text-shine">
+            <Nav.Link href="/people" className="text-shine">
               People
             </Nav.Link>
-            <Nav.Link href="#features" className="text-shine">
+            <Nav.Link href="/films" className="text-shine">
               Films
             </Nav.Link>
-            <Nav.Link href="#pricing" className="text-shine">
+            <Nav.Link href="/planets" className="text-shine">
               Planets
             </Nav.Link>
-            <Nav.Link href="#pricing" className="text-shine">
+            <Nav.Link href="/species" className="text-shine">
               Species
             </Nav.Link>
-            <Nav.Link href="#pricing" className="text-shine">
+            <Nav.Link href="/starships" className="text-shine">
               Starships
             </Nav.Link>
-            <Nav.Link href="#pricing" className="text-shine">
+            <Nav.Link href="/vehicles" className="text-shine">
               Vehicles
             </Nav.Link>
           </Nav>

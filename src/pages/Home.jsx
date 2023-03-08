@@ -9,13 +9,16 @@ import Section from "../components/Section";
 
 const Home = () => {
   const [people, setPeople] = useState([]);
+  const [allPage, setAllpage] = useState(0);
+  const [page, setPage] = useState(1);
+  // process.env.REACT_APP_BASE_URL
 
   const getPeople = async () => {
     await axios
-      // .get(process.env.REACT_APP_BASE_URL + "/people")
-      .get(process.env.REACT_APP_BASE_URL + "/people/?page=3")
+      .get(`https://swapi.dev/api/people/?page=${page}`)
       .then((result) => {
         setPeople(result.data.results);
+        setAllpage(result.data.count);
       })
       .catch((err) => {
         alert("error");
@@ -25,6 +28,13 @@ const Home = () => {
   useEffect(() => {
     getPeople();
   }, []);
+
+  const handlePrevious = () => {
+    setPage(page > 1 ? page - 1 : 1);
+  };
+  const handleNext = () => {
+    setPage(Math.ceil(allPage / 10) === page ? page : page + 1);
+  };
 
   return (
     <div>
@@ -51,8 +61,8 @@ const Home = () => {
           </div>
         </div>
         <div className="">
-          <Section />
-          <div className="row row-cols-lg-5">
+          <Section title="People" />
+          <div className="row row-cols-lg-5 pt-4">
             {people.map((item, index) => {
               return (
                 <div className="col pb-3">
@@ -61,16 +71,14 @@ const Home = () => {
               );
             })}
           </div>
-          <div className="d-flex justify-content-center py-5">
+          <div className="d-flex justify-content-center py-3">
             <div className="row">
               <div className="col">
-                <FontAwesomeIcon icon={faArrowLeft} />
+                <FontAwesomeIcon icon={faArrowLeft} onClick={handlePrevious} />
               </div>
+              <div className="col">{page}</div>
               <div className="col">
-                <p>1</p>
-              </div>
-              <div className="col">
-                <FontAwesomeIcon icon={faArrowRight} />
+                <FontAwesomeIcon icon={faArrowRight} onClick={handleNext} />
               </div>
             </div>
           </div>

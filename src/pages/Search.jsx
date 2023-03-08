@@ -2,14 +2,13 @@ import React from "react";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
-const Planets = () => {
+const Search = () => {
   return (
     <div>
       <Navigation />
-      Planets
       <Footer />
     </div>
   );
 };
 
-export default Planets;
+export default Search;

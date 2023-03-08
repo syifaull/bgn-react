@@ -1,10 +1,10 @@
 import React from "react";
 
-const Section = () => {
+const Section = (props) => {
   return (
     <div>
       <div className="">
-        <p className=" fw-semibold fs-5">Judul</p>
+        <p className=" fw-semibold fs-5">{props.title}</p>
         <hr></hr>
       </div>
     </div>
