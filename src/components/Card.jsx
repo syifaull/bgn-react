@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div>
       <div className="card" style={{ width: "10rem" }}>
@@ -11,7 +11,7 @@ const Card = () => {
         />
       </div>
       <div style={{ width: "10rem" }}>
-        <p className="text-center">Judul</p>
+        <p className="text-center">{props.name}</p>
       </div>
     </div>
   );

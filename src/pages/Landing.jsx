@@ -11,6 +11,7 @@ const Landing = () => {
           className="starwars-img"
         />
         <p className="fw-semibold pt-3">A guide for beginners</p>
+        <br></br>
         <a href="/home">
           <p className="text-shine text-gray fw-bold fs-5">Get Started</p>
         </a>
