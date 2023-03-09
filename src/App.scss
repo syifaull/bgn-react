@@ -2,6 +2,7 @@
 
 $gray : #1D1E1F;
 $light-gray: #AEAEAE;
+$glow-shadow: #FC0 1px 1px 5px, #FC0 -1px -1px 5px;
 
 .App {
   font-family: 'Nunito', sans-serif;
@@ -11,12 +12,12 @@ $light-gray: #AEAEAE;
 }
 
 .text-shine:hover, .Nav.Link:active {
-  text-shadow: #FC0 1px 1px 5px, #FC0 -1px -1px 5px; 
+  text-shadow: $glow-shadow; 
   color: white
 }
 
 .shine:hover {
-  box-shadow: #FC0 1px 1px 5px, #FC0 -1px -1px 5px;
+  box-shadow: $glow-shadow;
 }
 
 .text-gray {
@@ -48,3 +49,7 @@ p {
   background-color: white;
 }
 
+
+.form-control:focus {
+  box-shadow: $glow-shadow;
+}
