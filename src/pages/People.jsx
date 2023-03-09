@@ -70,7 +70,7 @@ const People = () => {
               type="button"
               id="button-addon2"
             >
-              Search
+              <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </div>
         </div>
